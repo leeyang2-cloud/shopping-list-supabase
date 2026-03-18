@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     const render = () => {
         const items = manager.getItems();
-        
+
         // 초기화
         shoppingList.innerHTML = '';
-        
+
         // 빈 메시지 토글
         if (items.length === 0) {
             emptyMessage.classList.remove('hidden');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         li.innerHTML = `
             <div class="flex items-center gap-3">
-                <input type="checkbox" ${item.completed ? 'checked' : ''} 
+                <input type="checkbox" ${item.completed ? 'checked' : ''}
                        class="w-5 h-5 cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500 toggle-checkbox">
                 <span class="item-text font-medium ${item.completed ? 'text-gray-400 line-through' : 'text-gray-700'}">${item.text}</span>
             </div>

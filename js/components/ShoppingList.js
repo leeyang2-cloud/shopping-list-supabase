@@ -17,13 +17,12 @@ export class ShoppingListManager {
                 .from('shopping_items')
                 .select('*')
                 .order('created_at', { ascending: true });
-            
+
             if (error) throw error;
             this.items = data || [];
             return this.items;
         } catch (error) {
             console.error('데이터 로드 중 오류 발생:', error);
-            // 에러 시 로컬 스토리지로 폴백(Fallback)할 수도 있지만, 현재는 빈 배열 반환
             alert('데이터를 불러오는데 실패했습니다.');
             return [];
         }
