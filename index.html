@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심플 쇼핑 리스트</title>
+    <!-- Tailwind CSS CDN 사용 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div id="app" class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-2xl font-bold text-center text-blue-600 mb-6">🛒 쇼핑 리스트</h1>
+        
+        <!-- 아이템 추가 영역 -->
+        <div class="flex gap-2 mb-6">
+            <input type="text" id="itemInput" 
+                   placeholder="살 물건을 입력하세요" 
+                   class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="addButton" 
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                추가
+            </button>
+        </div>
+
+        <!-- 리스트 영역 -->
+        <ul id="shoppingList" class="space-y-3">
+            <!-- 리스트 아이템이 동적으로 추가됩니다 -->
+        </ul>
+
+        <div id="emptyMessage" class="text-center text-gray-400 mt-10 hidden">
+            리스트가 비어있습니다.
+        </div>
+    </div>
+
+    <!-- 모듈 기반 자바스크립트 로드 -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

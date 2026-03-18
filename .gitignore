@@ -1,0 +1,4 @@
+# 환경 변수 설정 파일 무시
+.env
+js/env.js
+node_modules/

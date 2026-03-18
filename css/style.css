@@ -1,0 +1,30 @@
+/* 
+ * 쇼핑 리스트 커스텀 스타일
+ */
+
+/* 리스트 아이템 애니메이션 효과 */
+.item-enter {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 완료된 아이템 스타일 */
+.item-completed .item-text {
+    text-decoration: line-through;
+    color: #9ca3af; /* gray-400 */
+}
+
+/* 스크롤바 숨기기 (필요 시) */
+#shoppingList::-webkit-scrollbar {
+    display: none;
+}
